@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,18 +18,15 @@
       </div>
       
       <div class="affiliations">
-        <span class="affiliation"><sup>1</sup>Independent Researcher</span>
+        <span class="affiliation"><sup>1</sup>Xiaomi EV</span>
       </div>
 
       <div class="links">
-        <a href="#" class="btn btn-primary" id="demo-link">
-          <i class="fas fa-play-circle"></i> Live Demo
+        <a href="http://47.103.54.28/?tab=companies" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fas fa-globe"></i> 在线体验 PaperMap
         </a>
-        <a href="https://github.com/lihao2333/paper-map" class="btn btn-secondary" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i> Code
-        </a>
-        <a href="https://github.com/lihao2333/paper-map" class="btn btn-secondary" target="_blank" rel="noopener">
-          <i class="far fa-file-pdf"></i> Paper (Coming Soon)
+        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); alert('代码即将开源，敬请期待！');">
+          <i class="fab fa-github"></i> 代码 (敬请期待)
         </a>
       </div>
     </header>
@@ -39,71 +36,90 @@
         <img src="images/screenshot.png" alt="PaperMap Dashboard" class="screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <div class="screenshot-placeholder" style="display:none;">
           <i class="fas fa-image fa-3x"></i>
-          <p>Please save the dashboard screenshot as <code>docs/images/screenshot.png</code></p>
+          <p>请将面板截图保存为 <code>docs/images/screenshot.png</code></p>
         </div>
       </div>
       <p class="caption">
-        <strong>Figure 1.</strong> The PaperMap dashboard provides a comprehensive timeline and multi-dimensional views of academic papers, organized by companies, universities, and authors.
+        <strong>图 1.</strong> PaperMap 面板提供了全面的学术论文时间线和多维度视图，按公司、高校和作者进行结构化组织。
       </p>
     </section>
 
     <section class="content-section">
-      <h2>Abstract</h2>
+      <h2>项目摘要 (Abstract)</h2>
       <p class="abstract-text">
-        In fast-evolving research fields such as 3D Gaussian Splatting (3DGS), World Models, Reinforcement Learning (RL), and Vision-Language-Action (VLA) models, the sheer volume of new papers and the fragmentation of information sources present a significant challenge for researchers. <strong>PaperMap</strong> introduces a paradigm shift from "passive paper reading" to "map-based active decision-making." By centering the organization of literature around entities of interest—such as specific companies, academic institutions, and key authors—PaperMap provides a stable, global perspective on the research landscape. This tool enables researchers to rapidly scan new contributions from major players in just 10 minutes a day, significantly reducing the cost of literature screening and facilitating more targeted deep reading.
+        在 3DGS、WorldModel、RL、VLA 等快速发展的研究方向中，论文更新速度极快且信息来源分散，给研究人员带来了巨大的信息筛选压力。<strong>PaperMap</strong> 提出了一种从「被动刷论文」到「基于地图的主动决策」的范式转变。通过以用户关注的核心实体（如特定公司、顶尖高校和关键作者）为中心来组织文献，PaperMap 为研究人员提供了一个稳定、全局的研究视野。作为一个开箱即用的在线服务，它让你每天只需花约 10 分钟即可快速扫描重点玩家的新工作，大幅降低论文筛选成本，从而将更多精力投入到有价值的深度阅读中。
       </p>
     </section>
 
     <section class="content-section">
-      <h2>Key Features</h2>
+      <h2>核心特性 (Key Features)</h2>
       <ul class="feature-list">
         <li>
-          <strong><i class="fas fa-stream"></i> Entity-Centric Timeline:</strong> 
-          Track the evolution of research by viewing paper timelines filtered by specific companies, universities, or authors.
+          <strong><i class="fas fa-stream"></i> 实体为中心的时间线：</strong> 
+          按特定公司、高校或作者过滤和查看论文时间线，清晰追踪研究演进脉络。
         </li>
         <li>
-          <strong><i class="fas fa-compress-alt"></i> Abbreviation Visualization:</strong> 
-          Papers are displayed using concise abbreviations. Hovering over an entry reveals full metadata and AI-generated summaries.
+          <strong><i class="fas fa-compress-alt"></i> 简称可视化设计：</strong> 
+          论文列表以高度凝练的简称展示，鼠标悬停即可快速预览完整元数据与 AI 生成的摘要。
         </li>
         <li>
-          <strong><i class="fas fa-layer-group"></i> Multi-Dimensional Views:</strong> 
-          Seamlessly switch between comprehensive paper lists, industry-focused views, and academia-focused views.
+          <strong><i class="fas fa-layer-group"></i> 多维度视图切换：</strong> 
+          支持在综合论文列表、业界（公司）视角和学术界（高校）视角之间无缝切换。
         </li>
         <li>
-          <strong><i class="fas fa-robot"></i> Intelligent Augmentation:</strong> 
-          Automatically fetches abstracts, generates concise summaries, and extracts institutional affiliations using AI.
+          <strong><i class="fas fa-robot"></i> 智能信息增强：</strong> 
+          利用 AI 自动获取论文摘要、生成精简总结，并精准提取作者的机构归属信息。
         </li>
       </ul>
     </section>
 
     <section class="content-section">
-      <h2>Getting Started</h2>
-      <p>To run PaperMap locally, clone the repository and execute the following commands:</p>
-      <div class="code-block">
-        <pre><code>git clone https://github.com/lihao2333/paper-map.git
-cd paper-map
-pip install panel pandas param pysqlite3
-python dashboard.py</code></pre>
+      <h2>演示视频 (Demo Videos)</h2>
+      
+      <div class="video-container">
+        <h3 class="video-title">1. 公司论文时间线 (Company Timeline)</h3>
+        <video controls width="100%" class="demo-video">
+          <source src="paper-company.mp4" type="video/mp4">
+          您的浏览器不支持视频标签。
+        </video>
+        <p class="video-caption">展示不同科技公司（如 Google, Meta, OpenAI 等）在各研究方向的论文发布时间线。</p>
       </div>
-      <p>The local server will start at <code>http://localhost:5006</code>. For more detailed instructions, please refer to the <a href="https://github.com/lihao2333/paper-map#readme" target="_blank">README</a>.</p>
+
+      <div class="video-container">
+        <h3 class="video-title">2. 高校论文时间线 (University Timeline)</h3>
+        <video controls width="100%" class="demo-video">
+          <source src="paper-university.mp4" type="video/mp4">
+          您的浏览器不支持视频标签。
+        </video>
+        <p class="video-caption">展示顶尖高校（如 Stanford, MIT, Berkeley 等）的学术成果时间线。</p>
+      </div>
+
+      <div class="video-container">
+        <h3 class="video-title">3. 作者论文时间线 (Author Timeline)</h3>
+        <video controls width="100%" class="demo-video">
+          <source src="paper-author.mp4" type="video/mp4">
+          您的浏览器不支持视频标签。
+        </video>
+        <p class="video-caption">追踪核心研究人员的论文发表轨迹与合作网络。</p>
+      </div>
     </section>
 
     <section class="content-section">
-      <h2>Citation</h2>
-      <p>If you find this project useful for your research, please consider citing:</p>
+      <h2>引用 (Citation)</h2>
+      <p>如果您觉得这个服务对您的研究或工作有帮助，请考虑引用：</p>
       <div class="code-block bibtex">
-        <pre><code>@misc{li2024papermap,
+        <pre><code>@misc{li2026papermap,
   title={PaperMap: A Panoramic Map for Academic Papers},
   author={Li, Hao},
-  year={2024},
-  howpublished={\url{https://github.com/lihao2333/paper-map}}
+  year={2026},
+  howpublished={\url{http://47.103.54.28/}}
 }</code></pre>
       </div>
     </section>
 
     <footer class="footer">
-      <p>&copy; 2024 PaperMap Project. All rights reserved.</p>
-      <p>Template inspired by academic project pages.</p>
+      <p>&copy; 2026 PaperMap Project. 保留所有权利。</p>
+      <p>页面模板灵感来源于学术科研 Project Page。</p>
     </footer>
   </div>
 </body>
