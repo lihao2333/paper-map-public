@@ -11,12 +11,11 @@
   <div class="container">
     <header class="header">
       <h1 class="title">PaperMap: A Panoramic Map for Academic Papers</h1>
-      
+
       <div class="authors">
         <span class="author"><a href="https://github.com/lihao2333" target="_blank">Li Hao</a><sup>1</sup></span>
-        <!-- Add more authors here if needed -->
       </div>
-      
+
       <div class="affiliations">
         <span class="affiliation"><sup>1</sup>Xiaomi EV</span>
       </div>
@@ -31,95 +30,281 @@
       </div>
     </header>
 
+    <!-- Teaser -->
     <section class="teaser">
       <div class="screenshot-wrap">
-        <img src="images/screenshot.png" alt="PaperMap Dashboard" class="screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <img src="images/poster.png" alt="PaperMap Poster" class="screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <div class="screenshot-placeholder" style="display:none;">
           <i class="fas fa-image fa-3x"></i>
-          <p>请将面板截图保存为 <code>docs/images/screenshot.png</code></p>
+          <p>请将海报保存为 <code>docs/images/poster.png</code></p>
         </div>
       </div>
       <p class="caption">
-        <strong>图 1.</strong> PaperMap 面板提供了全面的学术论文时间线和多维度视图，按公司、高校和作者进行结构化组织。
+        <strong>图 1.</strong> PaperMap 竞赛海报：从被动刷论文，到基于地图的主动决策。
       </p>
     </section>
 
+    <!-- 层1+2：摘要 -->
     <section class="content-section">
-      <h2>项目摘要 (Abstract)</h2>
+      <h2>项目摘要</h2>
       <p class="abstract-text">
-        在 3DGS、WorldModel、RL、VLA 等快速发展的研究方向中，论文更新速度极快且信息来源分散，给研究人员带来了巨大的信息筛选压力。<strong>PaperMap</strong> 提出了一种从「被动刷论文」到「基于地图的主动决策」的范式转变。通过以用户关注的核心实体（如特定公司、顶尖高校和关键作者）为中心来组织文献，PaperMap 为研究人员提供了一个稳定、全局的研究视野。作为一个开箱即用的在线服务，它让你每天只需花约 10 分钟即可快速扫描重点玩家的新工作，大幅降低论文筛选成本，从而将更多精力投入到有价值的深度阅读中。
+        arXiv 论文量从 2000 年的 1.8 万篇/年增长到 2025 年的 28.5 万篇/年，日均近 800 篇新论文涌入，远超任何研究人员的阅读与筛选能力。然而，arXiv 本身缺少结构化的机构归属信息、个性化的论文总结以及按实体维度聚合的能力，现有工具也未能填补这些缺口。<strong>PaperMap</strong> 利用 AI 自动提取机构信息、生成智能总结，并以公司、高校、作者为核心构建论文全景地图，让研究人员每天只需 10 分钟即可掌握领域内的关键动态。
       </p>
     </section>
 
+    <!-- 层1：痛点 -->
     <section class="content-section">
-      <h2>核心特性 (Key Features)</h2>
-      <ul class="feature-list">
-        <li>
-          <strong><i class="fas fa-stream"></i> 实体为中心的时间线：</strong> 
-          按特定公司、高校或作者过滤和查看论文时间线，清晰追踪研究演进脉络。
-        </li>
-        <li>
-          <strong><i class="fas fa-compress-alt"></i> 简称可视化设计：</strong> 
-          论文列表以高度凝练的简称展示，鼠标悬停即可快速预览完整元数据与 AI 生成的摘要。
-        </li>
-        <li>
-          <strong><i class="fas fa-layer-group"></i> 多维度视图切换：</strong> 
-          支持在综合论文列表、业界（公司）视角和学术界（高校）视角之间无缝切换。
-        </li>
-        <li>
-          <strong><i class="fas fa-robot"></i> 智能信息增强：</strong> 
-          利用 AI 自动获取论文摘要、生成精简总结，并精准提取作者的机构归属信息。
-        </li>
-      </ul>
+      <h2><i class="fas fa-exclamation-triangle section-icon"></i> 痛点：论文爆炸时代</h2>
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">1.8万</span>
+          <span class="stat-label">2000 年 arXiv 年发文量</span>
+        </div>
+        <div class="stat-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="stat-item">
+          <span class="stat-number">28.5万</span>
+          <span class="stat-label">2025 年 arXiv 年发文量</span>
+        </div>
+        <div class="stat-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="stat-item">
+          <span class="stat-number">~800篇/天</span>
+          <span class="stat-label">近两年日均新增</span>
+        </div>
+      </div>
+      <p>25 年间增长超过 <strong>15 倍</strong>，2020 年后更进入指数级加速期。这已不再是"读论文慢"的问题，而是<strong>人力已经不可能覆盖</strong>的结构性问题。</p>
+
+      <div class="arxiv-chart-wrap">
+        <a href="https://arxiv.org/stats/monthly_submissions" target="_blank" rel="noopener">
+          <img src="images/arxiv-paper-chart.png" alt="arXiv 月度提交量变化趋势" class="arxiv-chart">
+        </a>
+        <p class="caption"><strong>图 2.</strong> arXiv 月度论文提交量变化趋势（数据来源：<a href="https://arxiv.org/stats/monthly_submissions" target="_blank" rel="noopener">arXiv.org</a>）。截至 2026 年 3 月，累计提交量已突破 298 万篇。</p>
+      </div>
+
+      <!-- 层2：信息缺口 -->
+      <h3>arXiv 的 4 个关键信息缺口</h3>
+      <p>arXiv 提供了开放的 API 和 MCP 接口，使得我们可以无限制地访问其完整的论文数据库——<strong>数据获取本身不再是瓶颈</strong>。真正的问题在于：拿到数据之后，arXiv 提供的元信息远远不够，存在以下关键缺口：</p>
+      <div class="gap-cards">
+        <div class="gap-card">
+          <div class="gap-icon"><i class="fas fa-building"></i></div>
+          <h4>无结构化机构信息</h4>
+          <p>只有作者名字，无法自动化地知道他属于哪个公司或高校。想追踪某个团队的工作，只能靠人工逐篇查阅。</p>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon"><i class="fas fa-file-alt"></i></div>
+          <h4>无个性化总结</h4>
+          <p>只有原始 Abstract，偏技术细节且篇幅长。面对每天数百篇论文，无法快速判断"这篇值不值得读"。</p>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon"><i class="fas fa-project-diagram"></i></div>
+          <h4>无实体维度聚合</h4>
+          <p>无法按"公司""高校""作者"维度查看论文时间线。Google Scholar、Semantic Scholar 也仍按论文或引用关系组织，缺少"以你关注的实体为中心"的视角。</p>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon"><i class="fas fa-tags"></i></div>
+          <h4>无灵活的分类组织</h4>
+          <p>arXiv 自带的分类（如 cs.CV、cs.AI）粒度太粗，无法按研究人员关注的细分方向（如"3DGS > 动态场景"）灵活组织论文。</p>
+        </div>
+      </div>
     </section>
 
+    <!-- 层3：为什么 AI 是最佳解法 -->
     <section class="content-section">
-      <h2>演示视频 (Demo Videos)</h2>
-      
+      <h2><i class="fas fa-brain section-icon"></i> 为什么 AI 是最佳解法？</h2>
+      <p>上述痛点不是人工标注、规则系统或众包能解决的，它们本质上需要 AI 的三种核心能力：</p>
+
+      <div class="ai-reasons">
+        <div class="ai-reason-card">
+          <div class="ai-reason-header">
+            <i class="fas fa-language"></i>
+            <h4>语言理解能力</h4>
+          </div>
+          <p>作者的机构信息散落在论文正文、致谢、邮箱域名等<strong>非结构化文本</strong>中，arXiv 元数据里根本不提供。传统正则匹配和规则系统无法可靠处理这种多变、模糊的自然语言表达，只有具备深度语言理解能力的 LLM 才能从自由文本中准确提取并归纳机构归属。</p>
+        </div>
+        <div class="ai-reason-card">
+          <div class="ai-reason-header">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <h4>总结与抽象能力</h4>
+          </div>
+          <p>把一篇技术性极强的论文摘要浓缩成<strong>"一句话帮你判断要不要读"</strong>，需要对论文核心贡献的深度理解。关键词提取、TF-IDF 等传统 NLP 方法只能提供碎片化信息，无法生成连贯且有判断力的总结。LLM 的生成式理解能力恰好填补了这个空白。</p>
+        </div>
+        <div class="ai-reason-card">
+          <div class="ai-reason-header">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4>规模化处理能力</h4>
+          </div>
+          <p>日均近 800 篇新论文，即使每篇只花 1 分钟人工处理（读摘要、查机构、写总结），也需要 <strong>13+ 小时</strong>的连续人力投入。AI 可以在几分钟内批量完成，且质量一致、不会疲劳，实现了从"不可能"到"每天自动更新"的质变。</p>
+        </div>
+      </div>
+
+      <div class="timing-box">
+        <h3><i class="fas fa-clock"></i> 为什么是现在？</h3>
+        <p>
+          用 AI 自动处理论文的想法由来已久，但真正可行是多个条件成熟后的结果：
+        </p>
+        <ul class="timing-list">
+          <li><strong>2023 · 能力突破：</strong>GPT 等大语言模型的出现，首次让机构信息提取和论文总结在质量上达到了可用水平，使这件事从"不可能"变成"理论可行"。</li>
+          <li><strong>2024-2025 · 成本骤降：</strong>但早期模型 token 价格高昂，对每天 800 篇论文做 AI 处理经济上不现实。<strong>DeepSeek、MiniMax</strong> 等高性价比模型的出现大幅拉低了成本；许多企业内部也已部署 LLM 服务并提供免费 token 额度，使其从"理论可行"变成<strong>"经济可行"</strong>。</li>
+          <li><strong>2025-2026 · 生态成熟：</strong>Anthropic 主导的 <strong>MCP 协议</strong>和 Skill 机制强化了开发者对 AI 的精细控制能力；<strong>OpenClaw</strong> 等开源 AI Agent 框架让自动化工具链变得开箱即用，使其从"经济可行"变成<strong>"工程可行"</strong>。</li>
+        </ul>
+        <p>
+          能力、成本、生态工具链三者在此刻汇聚——这正是 PaperMap 诞生的时间窗口。
+        </p>
+      </div>
+    </section>
+
+    <!-- 层4：AI 解决方案 -->
+    <section class="content-section">
+      <h2><i class="fas fa-cogs section-icon"></i> PaperMap 的 AI 解决方案</h2>
+      <p>针对 arXiv 的 4 个信息缺口，PaperMap 用 AI 能力一一补上：</p>
+
+      <div class="solution-pairs">
+        <div class="solution-pair">
+          <div class="solution-problem">
+            <span class="solution-tag problem-tag">缺口</span>
+            无结构化机构信息
+          </div>
+          <div class="solution-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="solution-answer">
+            <span class="solution-tag solution-tag-ai">AI 方案</span>
+            <strong>AI 机构归属识别</strong>——自动从论文全文中提取并识别每位作者的所属机构（公司/高校），构建结构化的实体关系网络。
+          </div>
+        </div>
+        <div class="solution-pair">
+          <div class="solution-problem">
+            <span class="solution-tag problem-tag">缺口</span>
+            无个性化总结
+          </div>
+          <div class="solution-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="solution-answer">
+            <span class="solution-tag solution-tag-ai">AI 方案</span>
+            <strong>AI 智能总结</strong>——为每篇论文生成简明扼要的个性化总结，帮助研究人员在几秒内判断论文价值，决定是否深入阅读。
+          </div>
+        </div>
+        <div class="solution-pair">
+          <div class="solution-problem">
+            <span class="solution-tag problem-tag">缺口</span>
+            无实体维度聚合
+          </div>
+          <div class="solution-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="solution-answer">
+            <span class="solution-tag solution-tag-ai">AI 方案</span>
+            <strong>AI 驱动的多维时间线</strong>——基于 AI 提取的信息，自动构建公司、高校、作者三个维度的论文时间线，实现"以实体为中心"的研究全景图。
+          </div>
+        </div>
+        <div class="solution-pair">
+          <div class="solution-problem">
+            <span class="solution-tag problem-tag">缺口</span>
+            无灵活的分类组织
+          </div>
+          <div class="solution-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="solution-answer">
+            <span class="solution-tag solution-tag-ai">方案</span>
+            <strong>用户自定义层级标签</strong>——支持创建多层级标签体系（如"自动驾驶 > 感知 > 3D检测"），按自定义分类灵活归档和组织论文，构建个人知识图谱。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 层5：适用场景 -->
+    <section class="content-section">
+      <h2><i class="fas fa-users section-icon"></i> 适用场景</h2>
+      <div class="usecase-cards">
+        <div class="usecase-card">
+          <div class="usecase-icon"><i class="fas fa-calendar-check"></i></div>
+          <h4>日常论文追踪</h4>
+          <p>每天只需 <strong>10 分钟</strong>，快速扫描你关注的公司、高校和作者的最新论文，告别漫无目的的刷 arXiv。</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon"><i class="fas fa-search-dollar"></i></div>
+          <h4>竞品技术调研</h4>
+          <p>一键查看某个公司（如 Google、OpenAI、Tesla）在某研究方向的<strong>全部论文布局</strong>，快速掌握竞争对手的技术动态。</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon"><i class="fas fa-sitemap"></i></div>
+          <h4>综述写作与方向规划</h4>
+          <p>以<strong>全局视角</strong>梳理某方向的研究脉络、关键参与者和时间演进，为综述写作和研究规划提供结构化支撑。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 上层能力：AI 深度分析 -->
+    <section class="content-section">
+      <h2><i class="fas fa-rocket section-icon"></i> 更进一步：AI 驱动的深度分析</h2>
+      <p>上述功能构建了论文组织的<strong>基础设施层</strong>。在此基础上，PaperMap 还可以进一步释放 AI 的分析能力，实现更高层级的智能应用：</p>
+
+      <div class="advanced-features">
+        <div class="advanced-card">
+          <div class="advanced-icon"><i class="fas fa-chart-pie"></i></div>
+          <div class="advanced-content">
+            <h4>研究方向分析</h4>
+            <p>批量阅读某个机构的全部论文，自动分析其研究重心分布。例如：<em>"小米 2026 年的论文主要集中在哪些方向？"</em></p>
+          </div>
+        </div>
+        <div class="advanced-card">
+          <div class="advanced-icon"><i class="fas fa-handshake"></i></div>
+          <div class="advanced-content">
+            <h4>合作关系挖掘</h4>
+            <p>基于论文的共同作者和机构信息，自动发现产学研合作网络。例如：<em>"小米主要和哪些高校进行合作？"</em></p>
+          </div>
+        </div>
+        <div class="advanced-card">
+          <div class="advanced-icon"><i class="fas fa-file-invoice"></i></div>
+          <div class="advanced-content">
+            <h4>周报自动生成</h4>
+            <p>将近一周的论文按机构维度自动整理为结构化报告，分析各家公司的主要工作和研究动态，<strong>一键推送至飞书群</strong>，让整个团队同步掌握前沿进展。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="advanced-note">
+        <i class="fas fa-info-circle"></i>
+        <span>这些上层能力建立在 PaperMap 已构建的结构化论文数据之上——有了 AI 提取的机构归属、智能总结和标签体系，才能进一步实现"从数据到洞察"的跃迁。</span>
+      </div>
+    </section>
+
+    <!-- 演示视频 -->
+    <section class="content-section">
+      <h2><i class="fas fa-play-circle section-icon"></i> 演示视频</h2>
+
       <div class="video-container">
-        <h3 class="video-title">1. 公司论文时间线 (Company Timeline)</h3>
+        <h3 class="video-title">1. 公司论文时间线</h3>
         <video controls width="100%" class="demo-video">
           <source src="paper-company.mp4" type="video/mp4">
           您的浏览器不支持视频标签。
         </video>
-        <p class="video-caption">展示不同科技公司（如 Google, Meta, OpenAI 等）在各研究方向的论文发布时间线。</p>
+        <p class="video-caption">展示不同科技公司在各研究方向的论文发布时间线，快速掌握业界动态。</p>
       </div>
 
       <div class="video-container">
-        <h3 class="video-title">2. 高校论文时间线 (University Timeline)</h3>
+        <h3 class="video-title">2. 高校论文时间线</h3>
         <video controls width="100%" class="demo-video">
           <source src="paper-university.mp4" type="video/mp4">
           您的浏览器不支持视频标签。
         </video>
-        <p class="video-caption">展示顶尖高校（如 Stanford, MIT, Berkeley 等）的学术成果时间线。</p>
+        <p class="video-caption">展示顶尖高校的学术成果时间线，追踪学术界的前沿进展。</p>
       </div>
 
       <div class="video-container">
-        <h3 class="video-title">3. 作者论文时间线 (Author Timeline)</h3>
+        <h3 class="video-title">3. 作者论文时间线</h3>
         <video controls width="100%" class="demo-video">
           <source src="paper-author.mp4" type="video/mp4">
           您的浏览器不支持视频标签。
         </video>
-        <p class="video-caption">追踪核心研究人员的论文发表轨迹与合作网络。</p>
+        <p class="video-caption">追踪核心研究人员的论文发表轨迹，发现研究趋势与合作关系。</p>
       </div>
-    </section>
 
-    <section class="content-section">
-      <h2>引用 (Citation)</h2>
-      <p>如果您觉得这个服务对您的研究或工作有帮助，请考虑引用：</p>
-      <div class="code-block bibtex">
-        <pre><code>@misc{li2026papermap,
-  title={PaperMap: A Panoramic Map for Academic Papers},
-  author={Li, Hao},
-  year={2026},
-  howpublished={\url{http://47.103.54.28/}}
-}</code></pre>
+      <div class="video-container">
+        <h3 class="video-title">4. 自定义标签归档</h3>
+        <video controls width="100%" class="demo-video">
+          <source src="paper-label.mp4" type="video/mp4">
+          您的浏览器不支持视频标签。
+        </video>
+        <p class="video-caption">使用自定义层级标签对论文进行分类归档，构建个人化的研究知识体系。</p>
       </div>
     </section>
 
     <footer class="footer">
-      <p>&copy; 2026 PaperMap Project. 保留所有权利。</p>
-      <p>页面模板灵感来源于学术科研 Project Page。</p>
+      <p>&copy; 2026 PaperMap Project. All rights reserved.</p>
     </footer>
   </div>
 </body>
