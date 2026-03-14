@@ -40,7 +40,7 @@
         </div>
       </div>
       <p class="caption">
-        <strong>图 1.</strong> PaperMap 竞赛海报：从被动刷论文，到基于地图的主动决策。
+        <strong>图 1.</strong> PaperMap 海报：从被动刷论文，到基于地图的主动决策。
       </p>
     </section>
 
@@ -81,13 +81,18 @@
       </div>
 
       <!-- 层2：信息缺口 -->
-      <h3>arXiv 的 4 个关键信息缺口</h3>
+      <h3>arXiv 的 5 个关键信息缺口</h3>
       <p>arXiv 提供了开放的 API 和 MCP 接口，使得我们可以无限制地访问其完整的论文数据库——<strong>数据获取本身不再是瓶颈</strong>。真正的问题在于：拿到数据之后，arXiv 提供的元信息远远不够，存在以下关键缺口：</p>
       <div class="gap-cards">
         <div class="gap-card">
           <div class="gap-icon"><i class="fas fa-building"></i></div>
           <h4>无结构化机构信息</h4>
           <p>只有作者名字，无法自动化地知道他属于哪个公司或高校。想追踪某个团队的工作，只能靠人工逐篇查阅。</p>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon"><i class="fas fa-font"></i></div>
+          <h4>无论文简称提取</h4>
+          <p><strong>简称（如 LoRA, 3DGS）是论文在人脑中的记忆锚点</strong>，但 arXiv 不提供此字段。简称往往隐藏在正文中，很难通过规则提取，导致列表展示时只能用冗长的全名，认知效率极低。</p>
         </div>
         <div class="gap-card">
           <div class="gap-icon"><i class="fas fa-file-alt"></i></div>
@@ -155,7 +160,7 @@
     <!-- 层4：AI 解决方案 -->
     <section class="content-section">
       <h2><i class="fas fa-cogs section-icon"></i> PaperMap 的 AI 解决方案</h2>
-      <p>针对 arXiv 的 4 个信息缺口，PaperMap 用 AI 能力一一补上：</p>
+      <p>针对 arXiv 的 5 个信息缺口，PaperMap 用 AI 能力一一补上：</p>
 
       <div class="solution-pairs">
         <div class="solution-pair">
@@ -167,6 +172,17 @@
           <div class="solution-answer">
             <span class="solution-tag solution-tag-ai">AI 方案</span>
             <strong>AI 机构归属识别</strong>——自动从论文全文中提取并识别每位作者的所属机构（公司/高校），构建结构化的实体关系网络。
+          </div>
+        </div>
+        <div class="solution-pair">
+          <div class="solution-problem">
+            <span class="solution-tag problem-tag">缺口</span>
+            无论文简称提取
+          </div>
+          <div class="solution-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="solution-answer">
+            <span class="solution-tag solution-tag-ai">AI 方案</span>
+            <strong>AI 简称提取与可视化</strong>——利用 AI 强大的文本理解能力，从正文中自动挖掘论文简称（如 "DreamFusion"），并在时间线中优先展示，极大提升浏览效率。
           </div>
         </div>
         <div class="solution-pair">
