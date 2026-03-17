@@ -424,6 +424,36 @@ body {
   margin-bottom: 0;
 }
 
+.ideal-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.ideal-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.ideal-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+}
+
+.ideal-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Solution Pairs */
 .solution-pairs {
   display: flex;
@@ -443,7 +473,8 @@ body {
 }
 
 .solution-problem {
-  flex: 0 0 180px;
+  flex: 1 1 200px;
+  min-width: 0;
   font-size: 1rem;
   color: var(--primary-color);
   font-weight: 500;
